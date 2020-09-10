@@ -80,3 +80,5 @@ class PrivateIngredientsAPITests(TestCase):
         """Test creating invalid ingredient fails"""
         payload = {'name': ''}
         res = self.client.post(INGREDIENTS_URL, payload)
+
+        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
