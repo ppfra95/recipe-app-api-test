@@ -31,14 +31,14 @@ class RecipeSerializer(serializers.ModelSerializer):
         many=True,
         queryset=Tag.objects.all()
     )
-
+    
     class Meta:
         model = Recipe
         fields = (
             'id', 'title', 'ingredients', 'tags', 'time_minutes',
-            'price', 'link',
+            'price', 'link', 'user',
         )
-        read_only_fields = ('id',)
+        read_only_fields = ('id', 'user')
 
 
 class RecipeDetailSerializer(RecipeSerializer):
