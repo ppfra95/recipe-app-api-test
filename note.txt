@@ -15,4 +15,6 @@ python manage.py dbshell
 https://caronates.wordpress.com/2010/01/12/comandos-para-postgres/
 
 SELECT * FROM pg_catalog.pg_tables; lista de tablas
-SELECT * FROM "TABLA"; mostrar datos de la tabla 
+SELECT * FROM "TABLA"; mostrar datos de la tabla
+
+python3 -m pip install python-dev-tools --user --upgrade
